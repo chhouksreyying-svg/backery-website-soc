@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Shopping Cart — Bakery Shop</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="../images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="../images/logo.png" alt="Bakery Shop logo" /></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="special-orders.html">Special Orders</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html" class="active" id="nav-cart-link">Cart (<span class="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page container">
+    <h1 class="page-title">Your Cart & Checkout</h1>
+    
+    <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-top: 24px;">
+      <!-- Item List Section -->
+      <div id="cart-items-container"></div>
+
+      <!-- Checkout / Customer Summary -->
+      <div id="cart-summary" style="display:none; background: var(--blush); padding: 24px; border-radius: 16px; border: 1px solid var(--border);">
+        <h2>Order Summary</h2>
+        <div style="display: flex; justify-content: space-between; margin: 12px 0; font-size: 16px;">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin: 16px 0; font-size: 18px; font-weight: bold; border-top: 1px dashed #ccc; padding-top: 12px;">
+          <span>Total:</span>
+          <span id="cart-total">$0.00</span>
+        </div>
+
+        <h3 style="margin-top: 24px; margin-bottom: 12px;">Customer & Delivery Details</h3>
+        <form onsubmit="processCheckout(event)">
+          <div class="input-group">
+            <input required type="text" placeholder="Full Name" style="width:100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #ccc;" />
+          </div>
+          <div class="input-group">
+            <input required type="tel" placeholder="Phone Number" style="width:100%; padding: 12px; margin-bottom: 12px; border-radius: 8px; border: 1px solid #ccc;" />
+          </div>
+          <div class="input-group">
+            <textarea required placeholder="Delivery Address / Notes" rows="3" style="width:100%; padding: 12px; margin-bottom: 16px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-mint" style="width: 100%;">Pay Now & Confirm Order 💳</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h2>Visit Us</h2>
+        <p><strong>Address:</strong> Opposite Angkor High School, Siem Reap, Cambodia</p>
+        <p><strong>Phone:</strong> +855-716-023-518</p>
+        <p style="margin-top: 8px;">
+          <a href="https://maps.google.com/?q=Angkor+High+School+Siem+Reap" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--primary); font-weight: 600;">
+            📍 View on Google Maps
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Opening Hours</h3>
+        <p>Mon - Fri: 7:00 AM - 7:00 PM</p>
+        <p>Sat - Sun: 8:00 AM - 6:00 PM</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul style="list-style: none; margin-top: 8px; line-height: 1.8;">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Menu</a></li>
+          <li><a href="special-orders.html">Special Orders</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-media">
+          <a href="https://web.facebook.com/chhouk.sreyying/"><i class='bx bxl-facebook'></i></a>
+          <a href="https://github.com/chhouksreyying-svg"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/chhouk-sreyying-0b2b1b21a/"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://www.instagram.com/dohyinn_/"><i class='bx bxl-instagram'></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bakery Shop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../javascript/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      renderCart();
+    });
+  </script>
+</body>
+</html>
