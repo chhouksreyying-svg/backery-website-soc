@@ -5,7 +5,7 @@ const products = [
   {
     slug: "cheesy garlic bread",
     name: "Cheesy Garlic Bread",
-    image: "../images/cake15.png",
+    image: "images/cake15.png",
     price: 32,
     size: 'Ø 8" · serves 8',
     toppings: "Fresh cheese, vanilla cream",
@@ -13,9 +13,9 @@ const products = [
       "Bold, aromatic garlic balanced by the rich creaminess of butter and the savory, salty goodness of melted cheese.",
   },
   {
-    slug: "chocolate-glazed-mousse-cake",
+    slug: "chocolate-glazed mousse cake",
     name: "Chocolate Glazed Mousse Cake",
-    image: "../images/cake16.png",
+    image: "images/cake16.png",
     price: 48,
     size: 'Ø 8" · serves 10',
     toppings: "Ginger, cherries, rosemary",
@@ -25,7 +25,7 @@ const products = [
   {
     slug: "mille-feuille",
     name: "Mille feuille",
-    image: "../images/cake14.png",
+    image: "images/cake14.png",
     price: 22,
     size: 'Ø 8" · serves 8',
     toppings: "Fresh strawberries, vanilla cream",
@@ -35,18 +35,17 @@ const products = [
   {
     slug: "macarons",
     name: "Macarons",
-    image: "../images/cake13.png",
+    image: "images/cake13.png",
     price: 12,
     size: "12 pieces",
     toppings: "Assorted flavors",
     description:
       "Sweet, nutty from the almond flour, and perfectly complemented by the creamy, flavorful center.",
   },
-  
   {
     slug: "strawberry-cake",
     name: "Strawberry Cake",
-    image: "../images/strawberry.png",
+    image: "images/strawberry.png",
     price: 32,
     size: 'Ø 8" · serves 8',
     toppings: "Fresh strawberries, vanilla cream",
@@ -56,7 +55,7 @@ const products = [
   {
     slug: "gingerbread-village-cake",
     name: "Gingerbread Village Cake",
-    image: "../images/gingerbread.png",
+    image: "images/gingerbread.png",
     price: 48,
     size: 'Ø 8" · serves 10',
     toppings: "Gingerbread houses, cherries, rosemary",
@@ -66,7 +65,7 @@ const products = [
   {
     slug: "chocolate-drip-cake",
     name: "Chocolate Drip Cake",
-    image: "../images/chocolate-drip.png",
+    image: "images/chocolate-drip.png",
     price: 55,
     size: "Two tiers · serves 16",
     toppings: "Chocolate glaze, cookies, pretzels",
@@ -76,7 +75,7 @@ const products = [
   {
     slug: "red-velvet-dream-cupcake",
     name: "Red Velvet Dream Cupcake",
-    image: "../images/red-velvet-cupcake.png",
+    image: "images/red-velvet-cupcake.png",
     price: 6,
     size: "Single cupcake",
     toppings: "Cream cheese frosting, macaron",
@@ -86,7 +85,7 @@ const products = [
   {
     slug: "red-velvet-layer-cake",
     name: "Red Velvet Layer Cake",
-    image: "../images/red-velvet-cake.png",
+    image: "images/red-velvet-cake.png",
     price: 38,
     size: 'Ø 7" · serves 8',
     toppings: "Fresh raspberries, mascarpone",
@@ -96,7 +95,7 @@ const products = [
   {
     slug: "raspberry-cream-tart",
     name: "Raspberry Cream Tart",
-    image: "../images/raspberry-tart.png",
+    image: "images/raspberry-tart.png",
     price: 34,
     size: 'Ø 9" · serves 10',
     toppings: "Raspberries, vanilla chantilly",
@@ -106,7 +105,7 @@ const products = [
   {
     slug: "cheesecake-selection",
     name: "Cheesecake Selection",
-    image: "../images/cheesecake.png",
+    image: "images/cheesecake.png",
     price: 24,
     size: "4 slices, assorted",
     toppings: "Mango, berries, chocolate",
@@ -116,7 +115,7 @@ const products = [
   {
     slug: "classic-tiramisu-cake",
     name: "Classic Tiramisu Cake",
-    image: "../images/tiramisu.png",
+    image: "images/tiramisu.png",
     price: 40,
     size: 'Ø 8" · serves 10',
     toppings: "Cocoa dust, ladyfingers, espresso cream",
@@ -126,7 +125,7 @@ const products = [
   {
     slug: "croissant",
     name: "Butter Croissant",
-    image: "../images/croissant.png",
+    image: "images/croissant.png",
     price: 4,
     size: "1 piece",
     toppings: "Butter glaze",
@@ -135,7 +134,7 @@ const products = [
   {
     slug: "carrot cake",
     name: "Carrot Cake",
-    image: "../images/cake17.png",
+    image: "images/cake17.png",
     price: 35,
     size: 'Ø 8" · serves 10',
     toppings: "Cream cheese frosting, walnuts",
@@ -145,7 +144,7 @@ const products = [
   {
     slug: "homemade cake pops",
     name: "Homemade Cake Pops",
-    image: "../images/cake18.png",
+    image: "images/cake18.png",
     price: 4,
     size: "1",
     toppings: "Butter glaze",
@@ -156,7 +155,7 @@ const products = [
   {
     slug: "cuteis-cake",
     name: "Cuteis Cake",
-    image: "../images/cake2.png",
+    image: "images/cake2.png",
     price: 45,
     size: 'Ø 8" · serves 10',
     toppings: "Pastel frosting & custom decor",
@@ -166,7 +165,7 @@ const products = [
   {
     slug: "strawberry-special",
     name: "Strawberry Cake",
-    image: "../images/cake3.png",
+    image: "images/cake3.png",
     price: 50,
     size: 'Ø 8" · serves 10',
     toppings: "Fresh strawberry display",
@@ -176,7 +175,7 @@ const products = [
   {
     slug: "cherry-cake",
     name: "Cherry Cake",
-    image: "../images/cake5.png",
+    image: "images/cake5.png",
     price: 55,
     size: 'Ø 9" · serves 12',
     toppings: "Cascade of cherries",
@@ -186,7 +185,7 @@ const products = [
   {
     slug: "chocolate-cake",
     name: "Chocolate Cake",
-    image: "../images/cake7.png",
+    image: "images/cake7.png",
     price: 60,
     size: 'Ø 9" · serves 12',
     toppings: "Luxury chocolate decor",
@@ -196,7 +195,7 @@ const products = [
   {
     slug: "green-cake",
     name: "Green Cake",
-    image: "../images/cake8.png",
+    image: "images/cake8.png",
     price: 48,
     size: 'Ø 8" · serves 10',
     toppings: "Detailed piping & glaze",
@@ -206,7 +205,7 @@ const products = [
   {
     slug: "white-rose-cake-pink-red",
     name: "White Rose Cake Pink Red",
-    image: "../images/cake10.png",
+    image: "images/cake10.png",
     price: 65,
     size: 'Two tiers · serves 14',
     toppings: "Handmade sugar roses",
@@ -216,7 +215,7 @@ const products = [
   {
     slug: "golden-celebration-cake",
     name: "Golden Celebration Cake",
-    image: "../images/cake11.png",
+    image: "images/cake11.png",
     price: 70,
     size: "Two tiers · serves 15",
     toppings: "Gold leaf accents, vanilla cream",
@@ -226,7 +225,7 @@ const products = [
   {
     slug: "blueberry-fantasy-cake",
     name: "Blueberry Fantasy Cake",
-    image: "../images/cake12.png",
+    image: "images/cake12.png",
     price: 52,
     size: 'Ø 8" · serves 10',
     toppings: "Fresh blueberries, lemon glaze",
@@ -235,14 +234,21 @@ const products = [
   },
 ];
 
+/* Image Path Helper */
+function getImagePath(imgPath) {
+  const isInHtmlFolder = window.location.pathname.includes('/html/');
+  return isInHtmlFolder ? `../${imgPath}` : imgPath;
+}
+
 function productURL(p) {
-  return `product.html?slug=${p.slug}`;
+  const isInHtmlFolder = window.location.pathname.includes('/html/');
+  return isInHtmlFolder ? `product.html?slug=${p.slug}` : `html/product.html?slug=${p.slug}`;
 }
 
 function simpleCardHTML(p, priceLabel) {
   return `
     <a class="card" href="${productURL(p)}">
-      <img src="${p.image}" alt="${p.name}" loading="lazy" />
+      <img src="${getImagePath(p.image)}" alt="${p.name}" loading="lazy" />
       <div class="card-body">
         <h3>${p.name}</h3>
         <p>${priceLabel}</p>
@@ -250,54 +256,53 @@ function simpleCardHTML(p, priceLabel) {
     </a>`;
 }
 
-/* Home: first 4 products */
 function renderFeatured() {
-  const grid = document.getElementById("featured-grid");
-  if (!grid) return;
-  grid.innerHTML = products
-    .filter((p) => !p.specialOnly)
-    .slice(0, 4)
-    .map((p) => simpleCardHTML(p, `$${p.price} · ${p.size}`))
-    .join("");
+  const el = document.getElementById("featured-grid");
+  if (el) {
+    el.innerHTML = products
+      .filter((p) => !p.specialOnly)
+      .slice(0, 4)
+      .map((p) => simpleCardHTML(p, `$${p.price} · ${p.size}`))
+      .join("");
+  }
 }
 
-/* Special orders */
 function renderSpecialOrders() {
-  const grid = document.getElementById("special-grid");
-  if (!grid) return;
-  grid.innerHTML = products
-    .filter((p) => p.specialOnly)
-    .map((p) => simpleCardHTML(p, `from $${p.price}`))
-    .join("");
+  const el = document.getElementById("special-grid");
+  if (el) {
+    el.innerHTML = products
+      .filter((p) => p.specialOnly)
+      .map((p) => simpleCardHTML(p, `from $${p.price}`))
+      .join("");
+  }
 }
 
-/* Products menu */
 function renderMenu() {
-  const grid = document.getElementById("menu-grid");
-  if (!grid) return;
-  grid.innerHTML = products
-    .filter((p) => !p.specialOnly)
-    .map(
-      (p) => `
-    <article class="menu-card">
-      <img src="${p.image}" alt="${p.name}" loading="lazy" />
-      <div class="menu-overlay">
-        <div>
-          <h2>${p.name}</h2>
-          <p class="desc">${p.description}</p>
+  const el = document.getElementById("menu-grid");
+  if (el) {
+    el.innerHTML = products
+      .filter((p) => !p.specialOnly)
+      .map(
+        (p) => `
+      <article class="menu-card">
+        <img src="${getImagePath(p.image)}" alt="${p.name}" loading="lazy" />
+        <div class="menu-overlay">
+          <div>
+            <h2>${p.name}</h2>
+            <p class="desc">${p.description}</p>
+          </div>
+          <div>
+            <div class="menu-row"><span>Price</span><span>$${p.price}</span></div>
+            <div class="menu-row small"><span>Size</span><span>${p.size}</span></div>
+            <a class="menu-order" href="${productURL(p)}">Order</a>
+          </div>
         </div>
-        <div>
-          <div class="menu-row"><span>Price</span><span>$${p.price}</span></div>
-          <div class="menu-row small"><span>Size</span><span>${p.size}</span></div>
-          <a class="menu-order" href="${productURL(p)}">Order</a>
-        </div>
-      </div>
-    </article>`
-    )
-    .join("");
+      </article>`
+      )
+      .join("");
+  }
 }
 
-/* Product detail page */
 function renderProductDetail() {
   const slug = new URLSearchParams(location.search).get("slug");
   const p = products.find((x) => x.slug === slug) || products[0];
@@ -306,7 +311,7 @@ function renderProductDetail() {
   document.title = `${p.name} — Bakery Shop`;
   const imgEl = document.getElementById("p-image");
   if (imgEl) {
-    imgEl.src = p.image;
+    imgEl.src = getImagePath(p.image);
     imgEl.alt = p.name;
   }
   if (document.getElementById("p-name")) document.getElementById("p-name").textContent = p.name;
@@ -316,13 +321,13 @@ function renderProductDetail() {
   if (document.getElementById("p-toppings")) document.getElementById("p-toppings").textContent = p.toppings;
 }
 
-/* Contact form */
 function setupContactForm() {
   const form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      location.href = "submit-confirmed.html";
+      const isInHtmlFolder = window.location.pathname.includes('/html/');
+      location.href = isInHtmlFolder ? "submit-confirmed.html" : "html/submit-confirmed.html";
     });
   }
 }
@@ -381,8 +386,11 @@ function renderCart() {
   const summaryContainer = document.getElementById('cart-summary');
   if (!container) return;
 
+  const isInHtmlFolder = window.location.pathname.includes('/html/');
+  const menuLink = isInHtmlFolder ? "products.html" : "html/products.html";
+
   if (cart.length === 0) {
-    container.innerHTML = `<p class="body-text" style="text-align:center; margin: 40px 0;">Your cart is empty. <a href="products.html" style="color:var(--primary); font-weight:bold;">Browse our menu</a> to add delicious treats!</p>`;
+    container.innerHTML = `<p class="body-text" style="text-align:center; margin: 40px 0;">Your cart is empty. <a href="${menuLink}" style="color:var(--primary); font-weight:bold;">Browse our menu</a> to add delicious treats!</p>`;
     if (summaryContainer) summaryContainer.style.display = 'none';
     return;
   }
@@ -400,7 +408,7 @@ function renderCart() {
 
     itemsHTML += `
       <div class="cart-item" style="display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 16px; border-radius: 12px; border: 1px solid var(--border); gap: 16px;">
-        <img src="${product.image}" alt="${product.name}" style="width: 70px; height: 70px; object-fit: cover; border-radius: 8px;" />
+        <img src="${getImagePath(product.image)}" alt="${product.name}" style="width: 70px; height: 70px; object-fit: cover; border-radius: 8px;" />
         <div style="flex: 1;">
           <h3 style="font-size: 16px; margin: 0;">${product.name}</h3>
           <p style="font-size: 14px; color: var(--muted-foreground); margin: 0;">$${product.price} each</p>
@@ -429,10 +437,11 @@ function processCheckout(e) {
   e.preventDefault();
   const orderId = Math.floor(10000 + Math.random() * 90000);
   localStorage.removeItem('bakery_cart');
-  window.location.href = `order-confirmed.html?id=${orderId}`;
+  const isInHtmlFolder = window.location.pathname.includes('/html/');
+  window.location.href = isInHtmlFolder ? `order-confirmed.html?id=${orderId}` : `html/order-confirmed.html?id=${orderId}`;
 }
 
-/* Auto initialize based on available elements */
+/* Initialization on page load */
 document.addEventListener('DOMContentLoaded', () => {
   updateCartBadge();
   renderFeatured();

@@ -3,47 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us — Bakery Shop</title>
-  <meta name="description" content="Meet the small team behind Bakery Shop: scratch baking, seasonal fruit and hand-finished cakes made fresh every morning." />
-   <!-- Boxicons -->
+  <title>Backery Shop</title>
+  <meta name="description" content="Handcrafted cakes, cupcakes and tarts baked fresh daily. Order online or design your own special celebration cake." />
+  <!-- Boxicons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Bakery Shop logo" /></a>
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Bakery Shop logo" /></a>
       <nav class="nav">
-        <a href="../index.html">Home</a>
-        <a href="about.html" class="active">About Us</a>
+        <a href="#">Home</a>
+        <a href="about.html">About Us</a>
         <a href="products.html">Products</a>
         <a href="special-orders.html">Special Orders</a>
         <a href="contact.html">Contact</a>
       </nav>
       <!-- ADD THE CART LINK HERE -->
-      <a href="cart.html" id="nav-cart-link">Cart 🛒 (<span class="cart-count">0</span>)</a>
+      <a href="html/cart.html" id="nav-cart-link">Cart 🛒 (<span class="cart-count">0</span>)</a>
     </div>
   </header>
 
-  <main class="page container about-grid">
-    <img src="../images/aboutus.png" alt="A hand-finished layer cake on a cake stand" class="about-image" />
-    <div>
-      <h1 class="page-title">Baked With Love, Daily</h1>
-      <p class="body-text">Bakery Shop began its journey in a humble, tiny home kitchen equipped with nothing more than a single oven, a single whisk, and a steadfast belief that desserts should taste genuinely like they were made just for you.</p>
-      <p class="body-text"> Over time, Quality and freshness stand at the heart of their daily routine, as they use real butter, fresh cream, and fruit sourced directly from the local market. They maintain a strict daily baking philosophy—never baking more than what can be finished by hand that very same morning—ensuring that if a treat isn't sold by the end of the day, it never makes its way onto the shelf the next morning. Backed by 12 years of baking experience, over 40 distinct cake designs, and a 100% scratch-made promise, the bakery balances a handcrafted, artisanal touch with a commitment to wholesome, fresh ingredients.</p>
-      <dl class="stats">
-        <div class="stat"><dt>12</dt><dd>Years baking</dd></div>
-        <div class="stat"><dt>40+</dt><dd>Cake designs</dd></div>
-        <div class="stat"><dt>100%</dt><dd>Made from scratch</dd></div>
-      </dl>
-    </div>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Deliver You A<br />Blissful Dessert<br />in Every Bite</h1>
+        <p>Every cake is baked from scratch each morning with real butter, seasonal fruit and a whole lot of care — made to turn ordinary days into small celebrations.</p>
+        <a href="html/products.html" class="btn btn-mint">Order Now</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.png" alt="Assorted mini cakes decorated with fresh fruit and flowers" />
+      </div>
+    </section>
+
+    <section class="section section-blush">
+      <div class="container">
+        <h2 class="section-title">Freshly Baked Today</h2>
+        <p class="section-subtitle">A little taste of what's on the counter right now.</p>
+        <div id="featured-grid" class="card-grid four"></div>
+        <div class="center" style="margin-top:2.5rem">
+          <a href="html/products.html" class="btn btn-blush">See all products</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-<footer class="site-footer">
+ <footer class="site-footer">
   <div class="container footer-inner">
     <div>
       <h2>Visit Us</h2>
@@ -65,11 +75,11 @@
     <div>
       <h3>Quick Links</h3>
       <ul style="list-style: none; margin-top: 8px; line-height: 1.8;">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Menu</a></li>
-        <li><a href="special-orders.html">Special Orders</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="html/about.html">About Us</a></li>
+        <li><a href="html/products.html">Menu</a></li>
+        <li><a href="html/special-orders.html">Special Orders</a></li>
+        <li><a href="html/contact.html">Contact Us</a></li>
       </ul>
     </div>
 
@@ -87,5 +97,8 @@
     <p>&copy; 2026 Bakery Shop. All rights reserved.</p>
   </div>
 </footer>
+
+  <script src="javascript/script.js"></script>
+  <script>renderFeatured();</script>
 </body>
 </html>
