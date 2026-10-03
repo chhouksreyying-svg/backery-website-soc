@@ -13,7 +13,7 @@ const products = [
       "Bold, aromatic garlic balanced by the rich creaminess of butter and the savory, salty goodness of melted cheese.",
   },
   {
-    slug: "chocolate-glazed mousse cake",
+    slug: "chocolate-glazed-mousse-cake",
     name: "Chocolate Glazed Mousse Cake",
     image: "../images/cake16.png",
     price: 48,
@@ -22,7 +22,7 @@ const products = [
     description:
       "A rich combination of sweet chocolate, delicate sponge, and fresh fruity notes from the strawberry and coulis accompaniment.",
   },
-    {
+  {
     slug: "mille-feuille",
     name: "Mille feuille",
     image: "../images/cake14.png",
@@ -40,10 +40,9 @@ const products = [
     size: "12 pieces",
     toppings: "Assorted flavors",
     description:
-      "Delicate, colorful macarons with a variety of flavors and textures, perfect for a sweet treat or gift.",
-    description:
       "Sweet, nutty from the almond flour, and perfectly complemented by the creamy, flavorful center.",
   },
+  
   {
     slug: "strawberry-cake",
     name: "Strawberry Cake",
@@ -133,7 +132,7 @@ const products = [
     toppings: "Butter glaze",
     description: "Flaky, golden-brown butter croissant baked fresh daily.",
   },
-    {
+  {
     slug: "carrot cake",
     name: "Carrot Cake",
     image: "../images/cake17.png",
@@ -153,7 +152,7 @@ const products = [
     description: "Flaky, golden-brown butter croissant baked fresh daily.",
   },
 
-  /* --- SPECIAL ORDERS ONLY (Hidden from regular menu, shown ONLY on Special Orders page) --- */
+  /* --- SPECIAL ORDERS ONLY --- */
   {
     slug: "cuteis-cake",
     name: "Cuteis Cake",
@@ -214,7 +213,6 @@ const products = [
     description: "An exquisite custom rose cake designed exclusively for weddings and grand romantic events.",
     specialOnly: true,
   },
-  /* --- NEW SPECIAL ITEM 7 --- */
   {
     slug: "golden-celebration-cake",
     name: "Golden Celebration Cake",
@@ -225,7 +223,6 @@ const products = [
     description: "An opulent custom cake adorned with edible gold leaf for extraordinary celebrations.",
     specialOnly: true,
   },
-  /* --- NEW SPECIAL ITEM 8 --- */
   {
     slug: "blueberry-fantasy-cake",
     name: "Blueberry Fantasy Cake",
@@ -253,26 +250,32 @@ function simpleCardHTML(p, priceLabel) {
     </a>`;
 }
 
-/* Home: first 4 products (excluding special-only items) */
+/* Home: first 4 products */
 function renderFeatured() {
-  document.getElementById("featured-grid").innerHTML = products
+  const grid = document.getElementById("featured-grid");
+  if (!grid) return;
+  grid.innerHTML = products
     .filter((p) => !p.specialOnly)
     .slice(0, 4)
     .map((p) => simpleCardHTML(p, `$${p.price} · ${p.size}`))
     .join("");
 }
 
-/* Special orders: ONLY shows items with specialOnly: true */
+/* Special orders */
 function renderSpecialOrders() {
-  document.getElementById("special-grid").innerHTML = products
+  const grid = document.getElementById("special-grid");
+  if (!grid) return;
+  grid.innerHTML = products
     .filter((p) => p.specialOnly)
     .map((p) => simpleCardHTML(p, `from $${p.price}`))
     .join("");
 }
 
-/* Products menu: ONLY shows regular items (hides specialOnly items) */
+/* Products menu */
 function renderMenu() {
-  document.getElementById("menu-grid").innerHTML = products
+  const grid = document.getElementById("menu-grid");
+  if (!grid) return;
+  grid.innerHTML = products
     .filter((p) => !p.specialOnly)
     .map(
       (p) => `
@@ -294,27 +297,36 @@ function renderMenu() {
     .join("");
 }
 
-/* Product detail page: reads ?slug= from the URL */
+/* Product detail page */
 function renderProductDetail() {
   const slug = new URLSearchParams(location.search).get("slug");
   const p = products.find((x) => x.slug === slug) || products[0];
+  if (!p) return;
+  
   document.title = `${p.name} — Bakery Shop`;
-  document.getElementById("p-image").src = p.image;
-  document.getElementById("p-image").alt = p.name;
-  document.getElementById("p-name").textContent = p.name;
-  document.getElementById("p-description").textContent = p.description;
-  document.getElementById("p-price").textContent = `$${p.price}`;
-  document.getElementById("p-size").textContent = p.size;
-  document.getElementById("p-toppings").textContent = p.toppings;
+  const imgEl = document.getElementById("p-image");
+  if (imgEl) {
+    imgEl.src = p.image;
+    imgEl.alt = p.name;
+  }
+  if (document.getElementById("p-name")) document.getElementById("p-name").textContent = p.name;
+  if (document.getElementById("p-description")) document.getElementById("p-description").textContent = p.description;
+  if (document.getElementById("p-price")) document.getElementById("p-price").textContent = `$${p.price}`;
+  if (document.getElementById("p-size")) document.getElementById("p-size").textContent = p.size;
+  if (document.getElementById("p-toppings")) document.getElementById("p-toppings").textContent = p.toppings;
 }
 
-/* Contact form → confirmation page */
+/* Contact form */
 function setupContactForm() {
-  document.getElementById("contact-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-    location.href = "submit-confirmed.html";
-  });
+  const form = document.getElementById("contact-form");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      location.href = "submit-confirmed.html";
+    });
+  }
 }
+
 /* --- Cart Logic --- */
 function getCart() {
   return JSON.parse(localStorage.getItem('bakery_cart') || '[]');
@@ -407,8 +419,10 @@ function renderCart() {
   itemsHTML += '</div>';
   container.innerHTML = itemsHTML;
 
-  document.getElementById('cart-subtotal').textContent = `$${total}`;
-  document.getElementById('cart-total').textContent = `$${total}`;
+  const subtotalEl = document.getElementById('cart-subtotal');
+  const totalEl = document.getElementById('cart-total');
+  if (subtotalEl) subtotalEl.textContent = `$${total}`;
+  if (totalEl) totalEl.textContent = `$${total}`;
 }
 
 function processCheckout(e) {
@@ -418,5 +432,13 @@ function processCheckout(e) {
   window.location.href = `order-confirmed.html?id=${orderId}`;
 }
 
-// Call on all pages to keep badge updated
-document.addEventListener('DOMContentLoaded', updateCartBadge);
+/* Auto initialize based on available elements */
+document.addEventListener('DOMContentLoaded', () => {
+  updateCartBadge();
+  renderFeatured();
+  renderSpecialOrders();
+  renderMenu();
+  renderProductDetail();
+  setupContactForm();
+  renderCart();
+});
