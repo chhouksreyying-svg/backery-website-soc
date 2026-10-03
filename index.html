@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Backery Shop</title>
+  <meta name="description" content="Handcrafted cakes, cupcakes and tarts baked fresh daily. Order online or design your own special celebration cake." />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="html/index.html" class="logo"><img src="images/logo.png" alt="Bakery Shop logo" /></a>
+      <nav class="nav">
+        <a href="html/index.html">Home</a>
+        <a href="html/about.html">About Us</a>
+        <a href="html/products.html">Products</a>
+        <a href="html/special-orders.html">Special Orders</a>
+        <a href="html/contact.html">Contact</a>
+      </nav>
+      <!-- ADD THE CART LINK HERE -->
+      <a href="html/cart.html" id="nav-cart-link">Cart 🛒 (<span class="cart-count">0</span>)</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Deliver You A<br />Blissful Dessert<br />in Every Bite</h1>
+        <p>Every cake is baked from scratch each morning with real butter, seasonal fruit and a whole lot of care — made to turn ordinary days into small celebrations.</p>
+        <a href="html/products.html" class="btn btn-mint">Order Now</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero.png" alt="Assorted mini cakes decorated with fresh fruit and flowers" />
+      </div>
+    </section>
+
+    <section class="section section-blush">
+      <div class="container">
+        <h2 class="section-title">Freshly Baked Today</h2>
+        <p class="section-subtitle">A little taste of what's on the counter right now.</p>
+        <div id="featured-grid" class="card-grid four"></div>
+        <div class="center" style="margin-top:2.5rem">
+          <a href="html/products.html" class="btn btn-blush">See all products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ <footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+      <h2>Visit Us</h2>
+      <p><strong>Address:</strong> Opposite Angkor High School, Siem Reap, Cambodia</p>
+      <p><strong>Phone:</strong> +855-716-023-518</p>
+      <p style="margin-top: 8px;">
+        <a href="https://maps.google.com/?q=Angkor+High+School+Siem+Reap" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--primary); font-weight: 600;">
+          📍 View on Google Maps
+        </a>
+      </p>
+    </div>
+
+    <div>
+      <h3>Opening Hours</h3>
+      <p>Mon - Fri: 7:00 AM - 7:00 PM</p>
+      <p>Sat - Sun: 8:00 AM - 6:00 PM</p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul style="list-style: none; margin-top: 8px; line-height: 1.8;">
+        <li><a href="html/index.html">Home</a></li>
+        <li><a href="html/about.html">About Us</a></li>
+        <li><a href="html/products.html">Menu</a></li>
+        <li><a href="html/special-orders.html">Special Orders</a></li>
+        <li><a href="html/contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-media">
+        <a href="https://web.facebook.com/chhouk.sreyying/"><i class='bx bxl-facebook'></i></a>
+        <a href="https://github.com/chhouksreyying-svg"><i class='bx bxl-github'></i></a>
+        <a href="https://www.linkedin.com/in/chhouk-sreyying-0b2b1b21a/"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://www.instagram.com/dohyinn_/"><i class='bx bxl-instagram'></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Bakery Shop. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="javascript/script.js"></script>
+  <script>renderFeatured();</script>
+</body>
+</html>
