@@ -815,9 +815,10 @@ a {
 /* ---------- Compact Site Footer ---------- */
 .site-footer {
   background-color: #FCD0F8;
-  padding: 20px 0 16px 0;
+  padding: 30px 0 20px 0;
   font-size: 14px;
   color: #444;
+  text-align: left; /* រក្សាបែបធម្មតាសម្រាប់ Desktop */
 }
 
 .footer-inner {
@@ -831,11 +832,16 @@ a {
   flex-wrap: wrap;
 }
 
+.footer-inner > div {
+  flex: 1;
+  min-width: 200px;
+}
+
 .footer-inner h2,
 .footer-inner h3 {
   font-size: 16px;
   font-weight: 700;
-  margin: 0 0 6px 0;
+  margin: 0 0 8px 0;
   color: #222;
 }
 
@@ -852,10 +858,11 @@ a {
   list-style: none;
 }
 
+/* Compact Social Icons */
 .social-media {
   display: flex;
   gap: 8px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .social-media a {
@@ -869,83 +876,43 @@ a {
   justify-content: center;
   font-size: 16px;
   text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-media a:hover {
+  background-color: #e86b7b;
+  color: #fff;
 }
 
 .footer-bottom {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
-  margin-top: 12px;
-  padding-top: 8px;
+  margin-top: 20px;
+  padding-top: 12px;
   text-align: center;
   font-size: 13px;
   color: #666;
 }
 
-/* ---------- Media Queries for Mobile Fine-Tuning ---------- */
+/* ---------- Media Queries for Mobile Center Alignment ---------- */
 @media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 16px;
-  }
-
-  .nav {
-    justify-content: center;
-    gap: 8px 16px;
-  }
-
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 30px 16px;
-  }
-
-  .hero-text {
-    padding: 10px 0;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-text p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-text .btn {
-    align-self: center;
-  }
-
-  .hero-image {
-    width: 100%;
-    min-height: 240px;
-    max-height: 320px;
-  }
-
-  .info-boxes,
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contact-container {
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px 16px;
+  .site-footer {
+    text-align: center; /* ដាក់ឱ្យគ្រប់អត្ថបទក្នុង Footer នៅចំកណ្តាលពេលមើលលើទូរសព្ទ */
   }
 
   .footer-inner {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center; /* តម្រៀបធាតុនីមួយៗឱ្យនៅចំកណ្តាល */
+    gap: 24px;
   }
-}
 
-@media (max-width: 480px) {
-  .info-boxes,
-  .stats {
-    grid-template-columns: 1fr;
+  .footer-inner > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ដាក់ចំណងជើង និងអត្ថបទឱ្យនៅចំកណ្តាល */
   }
-  
-  .nav {
-    font-size: 14px;
-    gap: 6px 12px;
+
+  .social-media {
+    justify-content: center; /* ដាក់រូបតំណាង Social Icons ឱ្យនៅចំកណ្តាល */
   }
 }
